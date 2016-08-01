@@ -1,1 +1,1 @@
-This is the repository associated with the Melstome functional traits project. The data for this project will be uploaded to Dryad during the review process.
+This is the repository associated with the Melstome functional traits project. The data for this project will be uploaded to Dryad during the review process and will be made available in this repository for easy of reruning analyses after a DOI has been obtained.
