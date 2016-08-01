@@ -1,6 +1,6 @@
 # Complete analysis of the melastome trait turnover data
 # Gaurav Kandlikar, gkandlikar@ucla.edu
-# Last updated 16 July 2016
+# Last updated 1 August 2016
 
 # Set up ----------
 library(dplyr); library(ape); library(picante); library(vegan)
@@ -10,7 +10,7 @@ tbl_df(individual_traits)
 default_pars <- par()
 # Toggle these to change some downstream things
 woody_only <- FALSE
-reps_for_K <- 99
+reps_for_K <- 999
 write_outputs <- FALSE
 
 # Data munging -------
