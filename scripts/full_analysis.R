@@ -659,8 +659,22 @@ source("scripts/functions/bootstrap_on_regression.R")
 traits_boot = c("log_sla", "log_ldmc", "log_leaf_area", "log_specific_force", "lnc", "stem_density", "log_seed_area")
 
 regression_bootstraps = lapply(traits_boot, function(x) regress_bootstrap(df = sp_by_location, trait = x))
+aov_bootstraps = lapply(traits_boot, function(x) aov_bootstrap(df = sp_by_location, trait = x))
 
-bootstrap_pvals = sapply(regression_bootstraps, function(x) x$sigpavls)
-names(bootstrap_pvals) = traits_boot
+regression_bootstrap_pvals = sapply(regression_bootstraps, function(x) x$sigpavls)
+regressionbootstrap_rs = sapply(regression_bootstraps, function(x) mean(x$rsq))
 
+aov_bootstrap_pvals = sapply(aov_bootstraps, function(x) x$sigpavls)
+aov_bootstrap_fs = sapply(aov_bootstraps, function(x) mean(x$fstats))
+
+names(regression_bootstrap_pvals) = traits_boot
+names(regressionbootstrap_rs) = traits_boot
+
+names(aov_bootstrap_pvals) = traits_boot
+names(aov_bootstrap_fs) = traits_boot
+
+sp_by_location$log_sla
+a <- aov(log_sla~as.factor(elevation), data = sp_by_location)
+summary(a)
+a$effects
 
