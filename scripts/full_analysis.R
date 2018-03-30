@@ -145,39 +145,43 @@ colvec <- colors
 # colvec <- colors[(sp_by_location$growth_form)]
 
 if (write_outputs == TRUE) {pdf("figures/trait_turnover.pdf", height = 15, width = 15)}
-par(mfrow = c(2,3), oma = c(8,1,5,1), mar = c(0, 5, 0, 1), 
+
+par(mfrow = c(2,4), oma = c(8,1,5,1), mar = c(0, 5, 0, 1), 
     cex.lab = 1.5, cex.main = 2, xpd = F, cex.axis = 1.25)
 
 # SLA
-plot(sp_by_location$log_sla~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
-     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
-     ylab = expression(paste('log'[10],'(SLA) (','cm'^2,'g'^-1,')')))
+plot(sp_by_location$log_sla~jitter(sp_by_location$elevation, factor = .3),
+     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, cex = 1.5,
+     ylab = expression(paste('log'[10],'(SLA) (','cm'^2,'g'^-1,')')),
+     ylim=c(1.9,2.9))
 add_line(trait = "log_sla", df = sp_by_location, log = F)
 box(lwd = 0.5)
-mtext(side = 3, text = "A", adj = 0.02, line = -1.3, font = 2)
+#mtext(side = 3, text = "A", adj = 0.02, line = -1.3, font = 2)
 
 # LDMC
-plot(sp_by_location$log_ldmc~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
-     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
-     ylab = expression(paste('log'[10],'(LDMC) (','mg g'^-1,')')))
+plot(sp_by_location$log_ldmc~jitter(sp_by_location$elevation, factor = .3), 
+     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, cex = 1.5,
+     ylab = expression(paste('log'[10],'(LDMC) (','mg g'^-1,')')),
+     ylim=c(1.05,1.7))
 add_line(trait = "log_ldmc", df = sp_by_location, log = F)
 box(lwd = 0.5)
-mtext(side = 3, text = "B", adj = 0.02, line = -1.3, font = 2)
+#mtext(side = 3, text = "B", adj = 0.02, line = -1.3, font = 2)
+
 # Leaf Area
-plot(sp_by_location$log_leaf_area~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
-     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
+plot(sp_by_location$log_leaf_area~jitter(sp_by_location$elevation, factor = .3), 
+     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, cex = 1.5,
      ylab = expression(paste('log'[10],'(Leaf Area) (','cm'^2,')')))
 add_line(trait = "log_leaf_area", df = sp_by_location, log = F)
 box(lwd = 0.5)
-mtext(side = 3, text = "C", adj = 0.02, line = -1.3, font = 2)
+#mtext(side = 3, text = "C", adj = 0.02, line = -1.3, font = 2)
 
 # Specific Force
 plot(sp_by_location$log_specific_force~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
      xlab = "", pch = pchvec, bty = "n", bg = colvec, 
      ylab = expression(paste('log'[10],'(Leaf Toughness) (','N m'^-2,')')))
-add_line(trait = "log_specific_force", df = sp_by_location, log = F)
+add_line(trait = "log_specific_force", df = sp_by_location, log = F, pos=0.1)
 box(lwd = 0.5)
-mtext(side = 3, text = "D", adj = 0.02, line = -1.3, font = 2)
+#mtext(side = 3, text = "D", adj = 0.02, line = -1.3, font = 2)
 
 # Leaf N
 plot(sp_by_location$lnc~jitter(sp_by_location$elevation, factor = .3), 
@@ -185,35 +189,51 @@ plot(sp_by_location$lnc~jitter(sp_by_location$elevation, factor = .3),
      ylab = "Leaf Nitrogen (%)")
 add_line(trait = "lnc", df = sp_by_location, log = F)
 box(lwd = 0.5)
-mtext(side = 3, text = "E", adj = 0.02, line = -1.3, font = 2)
+#mtext(side = 3, text = "E", adj = 0.02, line = -1.3, font = 2)
 
 # Stem Density
 plot(sp_by_location$stem_density~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
      xlab = "", pch = pchvec, bty = "n", bg = colvec, 
      ylab = expression(paste('Stem density (','g cm'^-3,')')))
-add_line(trait = "stem_density", df = sp_by_location, log = F)
+add_line(trait = "stem_density", df = sp_by_location, log = F, pos=.65)
 box(lwd = 0.5)
-legend("bottomright", pch = pchs, pt.bg = colors_notransp, xpd = NA,
+
+# Seed size
+tmp = subset(sp_by_location,log_seed_area<7)
+plot(tmp$log_seed_area~jitter(tmp$elevation, factor = .3), 
+     xlab = "", pch = pchvec, bty = "n", bg = colvec, cex = 1.5,
+     ylab = expression(paste('log'[10],'(Seed area) (',mu,'m'^2,')')))
+add_line(trait = "log_seed_area", df = tmp, log = F)
+box(lwd = 0.5)
+
+# Legend
+plot(sp_by_location$log_seed_area~jitter(sp_by_location$elevation, factor = .3), 
+     xlab = "", bty = "n", bg = colvec, type="n", ylab = "", xaxt="n", yaxt="n")
+
+legend(x=0, y=6.5, pch = pchs, 
+       pt.bg = colors_notransp, xpd = NA, y.intersp = 1,
        legend = levels(sp_by_location$growth_form), horiz = F, 
-       inset = c(0,-.15), bty = "n", pt.cex = 1.33, cex = 1.33, 
-       x.intersp = 0.8, y.intersp = 1)
-mtext(side = 3, text = "F", adj = 0.02, line = -1.3, font = 2)
+       bty = "n", pt.cex = 1.33, cex = 1.33, x.intersp = 0.8)
+#mtext(side = 3, text = "F", adj = 0.02, line = -1.3, font = 2)
 
 # Title and axis
 # title("Trait turnover across elevation", outer = T, line = 1, cex = 1.25)
 mtext(side = 1, text = "Elevation (m)", outer = T, line = 5, cex = 1.25)
+
 
 if(write_outputs == TRUE) {dev.off()}
 par(default_pars)
 
 
 # # Projected Seed Area - not including this
-# plot(sp_by_location$log_seed_area~jitter(sp_by_location$elevation, factor = .3), 
-#      xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
-#      ylab = expression(paste('log'[10],'(Seed area) (',mu,'m'^2,')')))
-# add_line(trait = "log_seed_area", df = sp_by_location, log = F)
-# box(lwd = 0.5)
+ plot(sp_by_location$log_seed_area~jitter(sp_by_location$elevation, factor = .3), 
+      xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
+      ylab = expression(paste('log'[10],'(Seed area) (',mu,'m'^2,')')))
+ add_line(trait = "log_seed_area", df = sp_by_location, log = F)
+ box(lwd = 0.5)
+ summary(lm(log_seed_area~elevation,sp_by_location))
 
+ 
 # Trait turnover for woody species only --------
 woody_only <- sp_by_location %>% filter(growth_form == "woody")
 woody_only <- data.frame(woody_only)
@@ -272,13 +292,22 @@ mtext(side = 1, text = "Elevation (m)", outer = T, line = 3, cex = 1.25)
 if(write_outputs == TRUE) {dev.off()}
 par(default_pars)
 
+# # Projected Seed Area - not including this
+plot(woody_only$log_seed_area~jitter(woody_only$elevation, factor = .3), 
+     xlab = "", pch = pchvec, bty = "n", xaxt = "n", bg = colvec, 
+     ylab = expression(paste('log'[10],'(Seed area) (',mu,'m'^2,')')))
+add_line(trait = "log_seed_area", df = woody_only, log = F)
+box(lwd = 0.5)
+summary(lm(log_seed_area~elevation,woody_only))
+
+
 # Mantel correlation of taxon/functional/phylo dissimilarities -------
 
 # Elevation and Temperature dissimilarities
 
 elev_diff <- dist(matrix(c(30, 500, 800, 2000, 2500)))
 elev_diff
-temp_diff <- dist(matrix(c(25, 21.6, 20, 14.5, 12.1)))
+temp_diff <- dist(matrix(c(24.61551,22.20317,20.66338,14.50421,11.93789)))
 temp_diff
 
 
@@ -622,4 +651,30 @@ mtext(side = 1, expression(paste(mu, m^2)), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$log_seed_area, na.rm = T), lwd = 0.7, lty = 3)
 
 if(write_outputs == TRUE) {dev.off()}
+
+
+# Regression bootstraps ------
+source("scripts/functions/bootstrap_on_regression.R")
+
+traits_boot = c("log_sla", "log_ldmc", "log_leaf_area", "log_specific_force", "lnc", "stem_density", "log_seed_area")
+
+regression_bootstraps = lapply(traits_boot, function(x) regress_bootstrap(df = sp_by_location, trait = x))
+aov_bootstraps = lapply(traits_boot, function(x) aov_bootstrap(df = sp_by_location, trait = x))
+
+regression_bootstrap_pvals = sapply(regression_bootstraps, function(x) x$sigpavls)
+regressionbootstrap_rs = sapply(regression_bootstraps, function(x) mean(x$rsq))
+
+aov_bootstrap_pvals = sapply(aov_bootstraps, function(x) x$sigpavls)
+aov_bootstrap_fs = sapply(aov_bootstraps, function(x) mean(x$fstats))
+
+names(regression_bootstrap_pvals) = traits_boot
+names(regressionbootstrap_rs) = traits_boot
+
+names(aov_bootstrap_pvals) = traits_boot
+names(aov_bootstrap_fs) = traits_boot
+
+sp_by_location$log_sla
+a <- aov(log_sla~as.factor(elevation), data = sp_by_location)
+summary(a)
+a$effects
 

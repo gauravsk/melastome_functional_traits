@@ -1,0 +1,102 @@
+full_name,genus,species,Tribe,growth_form,fruit_type,dispersal_probable,length_min,length_max,width_min,width_max,mean_length,mean_width
+Mouriri_gleasoniana,Mouriri,gleasoniana,Memecyleae,woody,Berry,biotic,8000,8300,7200,7800,8150,7500
+Henriettea_tuberculosa,Henriettea,tuberculosa,Henrietteeae,woody,Berry,biotic,496,NA,445,NA,496,445
+Blakea_scarlatina,Blakea,scarlatina,Blakeae,epiphyte,Berry,biotic,NA,NA,NA,NA,NA,NA
+Blakea_calycosa,Blakea,calycosa,Blakeae,epiphyte,Berry,biotic,920,980,300,430,950,365
+Blakea_austin-smithii,Blakea,austin-smithii,Blakeae,epiphyte,Berry,biotic,720,770,510,660,745,585
+Blakea_penduliflora,Blakea,penduliflora,Blakeae,epiphyte,Berry,biotic,801,978,513,636,889.5,574.5
+Blakea_foliacea,Blakea,foliacea,Blakeae,epiphyte,Berry,biotic,NA,NA,NA,NA,NA,NA
+Blakea_anomala,Blakea,anomala,Blakeae,epiphyte,Berry,biotic,1260,1280,500,520,1270,510
+Blakea_cf_watsonii,Blakea,cf_watsonii,Blakeae,epiphyte,Berry,biotic,NA,NA,NA,NA,NA,NA
+Blakea_maurofernandeziana,Blakea,maurofernandeziana,Blakeae,epiphyte,Berry,biotic,1201,1276,648,671,1238.5,659.5
+Blakea_henripittieri,Blakea,henripittieri,Blakeae,epiphyte,Berry,biotic,970,1130,440,610,1050,525
+Tibouchina_longifolia,Tibouchina,longifolia,Melastomeae,herb,Dry capsule,abiotic,290,300,190,NA,295,190
+Monochaetum_vulcanicum,Monochaetum,vulcanicum,Melastomeae,herb,Dry capsule,abiotic,NA,NA,NA,NA,NA,NA
+Monochaetum_floribundum,Monochaetum,floribundum,Melastomeae,herb,Dry capsule,abiotic,418,429,274,293,423.5,283.5
+Pilocosta_nana,Pilocosta,nana,Melastomeae,herb,Dry capsule,abiotic,500,750,500,670,625,585
+Centradenia_inaequilateralis,Centradenia,inaequilateralis,Melastomeae,herb,Dry capsule,abiotic,287,307,143,145,297,144
+Arthrostemma_ciliatum,Arthrostemma,ciliatum,Melastomeae,herb,Dry capsule,abiotic,720,750,840,870,735,855
+Nepsera_aquatica,Nepsera,aquatica,Melastomeae,herb,Dry capsule,abiotic,549,628,361,429,588.5,395
+Aciotis_rubricaulis,Aciotis,rubricaulis,Melastomeae,herb,Fleshy capsule,biotic,600,631,560,502,615.5,531
+Aciotis_indecora,Aciotis,indecora,Melastomeae,herb,Fleshy capsule,biotic,469,NA,318,411,469,364.5
+Triolena_hirsuta,Triolena,hirsuta,Bertolonieae,herb,Dry capsule,abiotic,430,500,235,250,465,242.5
+Meriania_phlomoides,Meriania,phlomoides,Merianieae,woody,Dry capsule,abiotic,474,NA,183,NA,474,183
+Adelobotrys_adscendens,Adelobotrys,adscendens,Merianieae,epiphyte,Dry capsule,abiotic,617,NA,465,NA,617,465
+Graffenrieda_galeottii,Graffenrieda,galeottii,Merianieae,woody,Dry capsule,abiotic,1993,NA,145,NA,1993,145
+Clidemia_costaricensis,Clidemia,costaricensis,Miconieae,woody,Berry,biotic,356.34,318.14,190.81,249.07,337.24,219.94
+Tococa_platyphylla,Tococa,platyphylla,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Clidemia_discolor,Clidemia,discolor,Miconieae,woody,Berry,biotic,295.74,NA,156.74,NA,295.74,156.74
+Clidemia_epiphytica,Clidemia,epiphytica,Miconieae,epiphyte,Berry,biotic,526.72,NA,220.66,NA,526.72,220.66
+Miconia_grandidentata,Miconia,grandidentata,Miconieae,epiphyte,Berry,biotic,1483,1539,910,982,1511,946
+Miconia_arboricola,Miconia,arboricola,Miconieae,epiphyte,Berry,biotic,521,NA,393,NA,521,393
+Miconia_costaricensis,Miconia,costaricensis,Miconieae,woody,Berry,biotic,565,NA,361,NA,565,361
+Miconia_loreyoides,Miconia,loreyoides,Miconieae,epiphyte,Berry,biotic,743,NA,502,NA,743,502
+Miconia_theizans,Miconia,theizans,Miconieae,woody,Berry,biotic,593,NA,428,NA,593,428
+Miconia_biperulifera,Miconia,biperulifera,Miconieae,woody,Berry,biotic,990.22,NA,560.64,NA,990.22,560.64
+Miconia_sp_stipule,Miconia,sp_stipule,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_coriacea,Miconia,coriacea,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_tonduzii_var_serrulata,Miconia,tonduzii_var_serrulata,Miconieae,woody,Berry,biotic,478,766,328,399,622,363.5
+Miconia_tonduzii_var_reticulata,Miconia,tonduzii_var_reticulata,Miconieae,woody,Berry,biotic,478,766,328,399,622,363.5
+Miconia_tonduzii_var_red,Miconia,tonduzii_var_red,Miconieae,woody,Berry,biotic,478,766,328,399,622,363.5
+Miconia_tonduzii_var_hirtella,Miconia,tonduzii_var_hirtella,Miconieae,woody,Berry,biotic,478,766,328,399,622,363.5
+Miconia_tonduzii_var_tonduzii,Miconia,tonduzii_var_tonduzii,Miconieae,woody,Berry,biotic,478,766,328,399,622,363.5
+Miconia_melanotricha,Miconia,melanotricha,Miconieae,herb,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_amplinodis,Miconia,amplinodis,Miconieae,woody,Berry,biotic,784,NA,651,NA,784,651
+Clidemia_setosa,Clidemia,setosa,Miconieae,herb,Berry,biotic,504.06,424,369,452,464.03,410.5
+Conostegia_lasiopoda,Conostegia,lasiopoda,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Conostegia_tenuifolia,Conostegia,tenuifolia,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_grayumii,Miconia,grayumii,Miconieae,woody,Berry,biotic,1370,NA,650,NA,1370,650
+Clidemia_ombrophila,Clidemia,ombrophila,Miconieae,woody,Berry,biotic,667,813,475,891,740,683
+Clidemia_hammelii,Clidemia,hammelii,Miconieae,woody,Berry,biotic,581,589,400,532,585,466
+Miconia_ligulata,Miconia,ligulata,Miconieae,woody,Berry,biotic,411,NA,273,NA,411,273
+Conostegia_subcrustulata,Conostegia,subcrustulata,Miconieae,woody,Berry,biotic,1069,1169,827,987,1119,907
+Conostegia_xalapensis,Conostegia,xalapensis,Miconieae,woody,Berry,biotic,1091,NA,813,NA,1091,813
+Conostegia_micrantha,Conostegia,micrantha,Miconieae,woody,Berry,biotic,441,NA,246,NA,441,246
+Conostegia_setosa,Conostegia,setosa,Miconieae,woody,Berry,biotic,489,508,298,327,498.5,312.5
+Conostegia_montana,Conostegia,montana,Miconieae,woody,Berry,biotic,659,NA,333,NA,659,333
+Conostegia_rufescens,Conostegia,rufescens,Miconieae,woody,Berry,biotic,566,840,420,423,703,421.5
+Conostegia_bracteata,Conostegia,bracteata,Miconieae,woody,Berry,biotic,463,586,225,256,524.5,240.5
+Conostegia_macrantha,Conostegia,macrantha,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Conostegia_pittieri,Conostegia,pittieri,Miconieae,woody,Berry,biotic,715,NA,311,NA,715,311
+Conostegia_setifera,Conostegia,setifera,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Conostegia_oerstediana,Conostegia,oerstediana,Miconieae,woody,Berry,biotic,721,NA,334,NA,721,334
+Leandra_granatensis,Leandra,granatensis,Miconieae,woody,Berry,biotic,235,NA,179,NA,235,179
+Leandra_grandifolia,Leandra,grandifolia,Miconieae,woody,Berry,biotic,273,296,225,266,284.5,245.5
+Miconia_centrodesma,Miconia,centrodesma,Miconieae,woody,Berry,biotic,472.38,NA,346.3,NA,472.38,346.3
+Clidemia_dentata,Clidemia,dentata,Miconieae,herb,Berry,biotic,465.85,NA,317.21,NA,465.85,317.21
+Clidemia_hirta,Clidemia,hirta,Miconieae,herb,Berry,biotic,564,NA,297,NA,564,297
+Clidemia_japurensis,Clidemia,japurensis,Miconieae,woody,Berry,biotic,501,561,300,320,531,310
+Clidemia_capitellata,Clidemia,capitellata,Miconieae,herb,Berry,biotic,709,730,485,563,719.5,524
+Clidemia_sericea,Clidemia,sericea,Miconieae,herb,Berry,biotic,742,787,371,503,764.5,437
+Clidemia_crenulata,Clidemia,crenulata,Miconieae,herb,Berry,biotic,589.62,681.2,476.76,375.57,635.41,426.165
+Miconia_dorsiloba,Miconia,dorsiloba,Miconieae,woody,Berry,biotic,480,520,230,330,500,280
+Miconia_multispicata,Miconia,multispicata,Miconieae,woody,Berry,biotic,1619,NA,920,NA,1619,920
+Miconia_oraria,Miconia,oraria,Miconieae,woody,Berry,biotic,1110,1180,900,970,1145,935
+Miconia_punctata,Miconia,punctata,Miconieae,woody,Berry,biotic,2388,NA,1496,NA,2388,1496
+Miconia_elata,Miconia,elata,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_ampla,Miconia,ampla,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_longifolia,Miconia,longifolia,Miconieae,woody,Berry,biotic,1500,NA,1383,NA,1500,1383
+Miconia_stevensiana,Miconia,stevensiana,Miconieae,woody,Berry,biotic,1790,1840,1030,1150,1815,1090
+Miconia_minutiflora,Miconia,minutiflora,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_dolichopoda,Miconia,dolichopoda,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_impetiolaris,Miconia,impetiolaris,Miconieae,woody,Berry,biotic,1524.4,NA,1075.86,NA,1524.4,1075.86
+Miconia_astroplocama,Miconia,astroplocama,Miconieae,herb,Berry,biotic,1014,NA,881,NA,1014,881
+Miconia_nervosa,Miconia,nervosa,Miconieae,woody,Berry,biotic,536,588,195,242,562,218.5
+Miconia_bubalina,Miconia,bubalina,Miconieae,woody,Berry,biotic,582.61,NA,479.74,NA,582.61,479.74
+Miconia_barbinervis,Miconia,barbinervis,Miconieae,woody,Berry,biotic,860,820,650,730,840,690
+Miconia_simplex,Miconia,simplex,Miconieae,woody,Berry,biotic,1314,NA,926,NA,1314,926
+Miconia_calvescens,Miconia,calvescens,Miconieae,herb,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_appendiculata,Miconia,appendiculata,Miconieae,woody,Berry,biotic,2118,NA,1708,NA,2118,1708
+Miconia_lacera,Miconia,lacera,Miconieae,herb,Berry,biotic,382,NA,208,NA,382,208
+Miconia_affinis,Miconia,affinis,Miconieae,woody,Berry,biotic,845,932,504,662,888.5,583
+Miconia_commutata,Miconia,commutata,Miconieae,woody,Berry,biotic,NA,NA,NA,NA,NA,NA
+Miconia_gracilis,Miconia,gracilis,Miconieae,woody,Berry,biotic,809,821,647,665,815,656
+Clidemia_reitziana,Clidemia,reitziana,Miconieae,herb,Berry,biotic,392,NA,207,NA,392,207
+Clidemia_biolleyana,Clidemia,biolleyana,Miconieae,herb,Berry,biotic,NA,NA,NA,NA,NA,NA
+Ossaea_macrophylla,Ossaea,macrophylla,Miconieae,woody,Berry,biotic,310,430,120,180,370,150
+Ossaea_laxivenula,Ossaea,laxivenula,Miconieae,woody,Berry,biotic,440,500,160,190,470,175
+Ossaea_micrantha,Ossaea,micrantha,Miconieae,woody,Berry,biotic,320,430,130,200,375,165
+Ossaea_brenesii,Ossaea,brenesii,Miconieae,woody,Berry,biotic,300,410,150,210,355,180
+Ossaea_robusta,Ossaea,robusta,Miconieae,woody,Berry,biotic,260,360,130,210,310,170
+Clidemia_densiflora,Clidemia,densiflora,Miconieae,woody,Berry,biotic,534.38,569.82,373.43,441.74,552.1,407.585
+Clidemia_aurantiaca,Clidemia,aurantiaca,Miconieae,woody,Berry,biotic,562,NA,722,NA,562,722
