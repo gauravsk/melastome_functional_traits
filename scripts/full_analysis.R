@@ -51,6 +51,7 @@ sp_by_location <- sp_by_location %>% select(-full_name_site)
 tbl_df(sp_by_location)
 str(sp_by_location)
 
+
 # Include area-based leaf nitrogen content (mg/cm2)
 sp_by_location$alnc <- sp_by_location$lnc/(100*sp_by_location$sla)
 
@@ -102,28 +103,29 @@ phylo <- drop.tip(phylo, mismatch)
 
 # Begin trait analysis ----------
 # First, check distribution of traits
-par(mfrow = c(2,4))
+par(mfrow = c(2,5))
 mapply(hist, sp_by_location %>% select(sla, ldmc, leaf_area, 
                                        specific_force, stem_density, 
-                                       thickness, lnc, seed_area), 
+                                       thickness, lnc, alnc, seed_area), 
        main = colnames(sp_by_location %>% select(sla, ldmc, leaf_area, 
                                                  specific_force, stem_density, 
-                                                 thickness, alnc, seed_area)))
+                                                 thickness, lnc, alnc, seed_area)))
 # It looks like SLA, LDMC, leaf area, thickness, and specific force need to be log-transformed for normalization
 sp_by_location <- sp_by_location %>% mutate(log_sla = log10(sla), 
                                             log_ldmc = log10(ldmc), 
                                             log_leaf_area = log10(leaf_area), 
                                             log_specific_force = log10(specific_force), 
                                             log_seed_area = log10(seed_area), 
-                                            log_thickness = log10(thickness))
+                                            log_thickness = log10(thickness),
+                                            log_alnc = log10(alnc))
 
-par(mfrow = c(2,4))
+par(mfrow = c(2,5))
 mapply(hist, sp_by_location %>% select(log_sla, log_ldmc, log_leaf_area, 
                                        log_specific_force, stem_density, 
-                                       log_thickness, lnc, log_seed_area), 
+                                       log_thickness, lnc, log_alnc, log_seed_area), 
        main = colnames(sp_by_location %>% select(log_sla, log_ldmc, log_leaf_area, 
                                                  log_specific_force, stem_density, 
-                                                 log_thickness, lnc, log_seed_area)))
+                                                 log_thickness, lnc, log_alnc, log_seed_area)))
 
 # Make a trait turnover plot ----------
 # First, source in the add_trendline() function 
@@ -196,11 +198,11 @@ box(lwd = 0.5)
 #mtext(side = 3, text = "E", adj = 0.02, line = -1.3, font = 2)
 
 # Leaf N (area-based)
-plot(sp_by_location$alnc~jitter(sp_by_location$elevation, factor = .3), 
-     xlab = "", pch = pchvec, bty = "n", bg = colvec, cex = 1.5,
-     ylab = "Leaf Nitrogen (g/cm2)")
-add_line(trait = "alnc", df = sp_by_location, log = F)
-box(lwd = 0.5)
+#plot(sp_by_location$log_alnc~jitter(sp_by_location$elevation, factor = .3), 
+#     xlab = "", pch = pchvec, bty = "n", bg = colvec, cex = 1.5,
+#     ylab = "Leaf Nitrogen (g/cm2)")
+#add_line(trait = "log_alnc", df = sp_by_location, log = F)
+#box(lwd = 0.5)
 #mtext(side = 3, text = "E", adj = 0.02, line = -1.3, font = 2)
 
 # Stem Density
@@ -689,4 +691,32 @@ sp_by_location$log_sla
 a <- aov(log_sla~as.factor(elevation), data = sp_by_location)
 summary(a)
 a$effects
+
+
+## Comparison to Read et al. (2013) results
+# elevation to MAT
+tmp = data.frame(elevation = c(30,500,800,2000,2500), mat = c(24.6, 22.2, 20.7, 14.5, 11.9))
+tmp = merge(tmp,sp_by_location,by="elevation",all=T)
+
+# SLA/LMA
+cor(1/tmp$sla,tmp$mat) # correlation observed in the CR melastomes (LMA vs. MAT)
+# range reported in the meta-analisis: from -0.30 to -0.68
+
+# LNC
+cor(tmp$lnc,tmp$mat)
+# range reported in the meta-analisis: from -0.?? to 0.??
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
