@@ -1,0 +1,60 @@
+study,r,n.sites,indiv.per.site,n.indiv,n.reg,by.mass.or.area,within.or.among,pft,biome,grad.min,grad.max,lat.mean,species,details
+Ceriani,0.923038461,14,30,420,14,m,within,forb,temp,500,2200,46.5,Primula glaucescens,
+Craine,-0.741619849,30,varies,118,30,m,among,grasslike,temp,45,1205,44.8,,
+Diemer,0.547722558,3,6,18,7,m,among,grasslike,trop,3200,4800,0,Graminoids,
+Diemer,0.447213595,3,6,18,7,a,among,grasslike,trop,3200,4800,0,Graminoids,
+Diemer,-0.1,3,,59,44,m,among,forb,trop,3200,4800,0,Forbs,
+Diemer,0.360555128,3,,59,44,a,among,forb,trop,3200,4800,0,Forbs,
+Qi,0.372827038,10,varies,119,119,m,within,tree angio,temp,1020,1770,40,Quercus liaotungensis,
+Song 2012,0.282842712,19,varies,53,53,a,among,forb,temp,815,2545,31.5,5 spp,
+Sparks,0.692098259,7,5,35,35,a,within,tree angio,temp,600,1820,37.1,Populus fremontii,
+Sparks,0.435889894,9,5,45,45,a,within,tree angio,temp,1500,2670,37.1,Populus angustifolia,
+Sundqvist,0.054772256,6,varies,18,18,m,among,many,boreal,500,1000,68.4,multiple,
+Vitousek,-0.655743852,,,29,29,m,within,tree angio,trop,73,2470,19.5,Metrosideros polymorpha,young wet habitat
+Vitousek,-0.871779789,,,13,13,m,within,tree angio,trop,265,2470,19.5,Metrosideros polymorpha,old wet habitat
+Vitousek,-0.447213595,,,15,15,m,within,tree angio,trop,518,2012,19.5,Metrosideros polymorpha,young dry habitat
+Vitousek,-0.547722558,,,9,9,m,within,tree angio,trop,305,2012,19.5,Metrosideros polymorpha,old dry habitat
+Vitousek,0.707106781,,,29,29,a,within,tree angio,trop,73,2470,19.5,Metrosideros polymorpha,young wet habitat
+Vitousek,0.842614977,,,13,13,a,within,tree angio,trop,265,2470,19.5,Metrosideros polymorpha,old wet habitat
+Vitousek,-0.2,,,15,15,a,within,tree angio,trop,518,2012,19.5,Metrosideros polymorpha,young dry habitat
+Vitousek,-0.1,,,9,9,a,within,tree angio,trop,305,2012,19.5,Metrosideros polymorpha,old dry habitat
+Wegner,0.88,18,,18,18,m,among,fern,trop,1700,3400,16.4,all ferns,
+Cardelus,-0.1239262,6,see paper,70,6,m,among,fern,trop,30,2600,10.1,epiphytic ferns,"r simulated from mean and SE given in paper, QR April 2"
+Cardelus,0.6362783,6,see paper,64,6,m,among,forb,trop,30,2600,10.1,epiphytic orchids,"r simulated from mean and SE given in paper, QR April 2"
+Cardelus,0.7654131,6,see paper,61,5,m,among,forb,trop,30,2600,10.1,epiphytic bromeliads,"r simulated from mean and SE given in paper, QR April 2"
+Cardelus,-0.3770914,6,see paper,43,6,m,among,tree angio,trop,30,2600,10.1,host trees of epiphytes,"r simulated from mean and SE given in paper, QR April 2"
+Cordell 1999,0.9530083,5,10,50,5,a,within,tree angio,trop,107,2469,19.5,Metrosideros polymorpha,"r simulated from mean and SE given in paper, QR April 4"
+Zhao 2008a,-0.2432451,10,see paper,50,10,m,within,tree conifer,temp,2501,3450,39.2,Picea crassifolia,"adult trees n=5 to 8 per site so used n=5, r simulated from mean and SE given in paper, QR April 6"
+Zhao 2008a,-0.4508161,10,see paper,50,10,a,within,tree conifer,temp,2501,3450,39.2,Picea crassifolia,"adult trees n=5 to 8 per site so used n=5, r simulated from mean and SE given in paper, QR April 6"
+Bresson 2011,0.842614977,10,see paper,90,10,a,within,tree angio,temp,100,1600,43.3,Fagus sylvatica,"9 to 21 indiv per site so used n=9, r simulated from mean and SE given in paper, QR April 10"
+Bresson 2011,0.866025404,10,see paper,90,10,a,within,tree angio,temp,100,1600,43.3,Quercus petraea,"9 to 21 indiv per site so used n=9, r simulated from mean and SE given in paper, QR April 10"
+Friend,0.6682078,6,5,30,6,a,within,grasslike,boreal,200,1000,56.4,Nardus stricta,"1986,r simulated from mean and SE given in paper, QR April 10"
+Friend,0.8273293,6,5,30,6,a,within,shrub,boreal,200,1000,56.4,Vaccinium myrtillus,"1986,r simulated from mean and SE given in paper, QR April 10"
+van de Weg,-0.7179108,8,see paper,128,8,m,among,tree angio,trop,220,3600,13,tropical trees,"4 trees per 4 to 5 species per site so used n=16, r simulated from mean and SE given in paper, QR April 10"
+van de Weg,0.7122805,8,see paper,128,8,a,among,tree angio,trop,220,3600,13,tropical trees,"4 trees per 4 to 5 species per site so used n=16, r simulated from mean and SE given in paper, QR April 10"
+Li 2006,-0.8478068,8,10,80,8,m,within,tree angio,temp,2000,3600,31.1,Quercus aquifolioides,"r simulated from mean and SE given in paper, QR April 10"
+Li 2006,0.530597,8,10,80,8,a,within,tree angio,temp,2000,3600,31.1,Quercus aquifolioides,"r simulated from mean and SE given in paper, QR April 10"
+Birmann,-0.9140398,4,see paper,55,4,m,within,tree conifer,temp,1850,2160,46.5,Pinus cembra,"summer, r simulated from mean and SE given in paper, QR April 9"
+Birmann,-0.3049552,4,see paper,90,4,m,within,tree conifer,temp,1700,2020,46.5,Picea abies,"r simulated from mean and SE given in paper, QR April 9"
+Birmann,-0.9691644,4,see paper,55,4,a,within,tree conifer,temp,1850,2160,46.5,Pinus cembra,"summer, r simulated from mean and SE given in paper, QR April 9"
+Birmann,-0.7884693,4,see paper,90,4,a,within,tree conifer,temp,1700,2020,46.5,Picea abies,"r simulated from mean and SE given in paper, QR April 9"
+DeLillis,0.7311741,10,see paper,20,10,m,among,many,temp,3000,3800,29.4,Nepalese trees,"2 to 4 indiv per species where a site represents a species at an elevation, so used n=2, r simulated from mean and SE given in table, QR May 11"
+Hikosaka,-0.3139617,4,see paper,112,4,m,among,tree angio,trop,600,3700,6.1,Malaysian trees,"r simulated from mean and SE given in table, QR May 11"
+Hikosaka,0.9604952,4,see paper,112,4,a,among,tree angio,trop,600,3700,6.1,Malaysian trees,"r simulated from mean and SE given in table, QR May 11"
+Koehler,-0.9713378,4,5,20,4,m,within,tree conifer,temp,1400,2100,28.3,Pinus canariensis,"r simulated from mean and SE extracted from graph, QR May 12"
+Koehler,-0.1370127,6,5,30,6,m,within,shrub,temp,1400,3100,28.3,Spartocytisus supranubius,"r simulated from mean and SE extracted from graph, QR May 12"
+Koehler,-0.7640462,5,5,25,5,m,within,forb,temp,1400,2400,28.3,Erysimum scoparium,"r simulated from mean and SE extracted from graph, QR May 12"
+Li 2007,0.2940822,5,10,50,5,m,within,shrub,temp,2000,3600,31.1,Hippophae rhamnoides,"male, r simulated from mean and SE extracted from graph, QR May 12"
+Li 2007,0.1171917,5,10,50,5,m,within,shrub,temp,2000,3600,31.1,Hippophae rhamnoides,"female, r simulated from mean and SE extracted from graph, QR May 12"
+Li 2007,0.4240442,5,10,50,5,a,within,shrub,temp,2000,3600,31.1,Hippophae rhamnoides,"male, r simulated from mean and SE extracted from graph, QR May 12"
+Li 2007,0.2521532,5,10,50,5,a,within,shrub,temp,2000,3600,31.1,Hippophae rhamnoides,"female, r simulated from mean and SE extracted from graph, QR May 12"
+Takahashi 2008,0.7602147,5,5,25,5,m,within,tree angio,temp,1600,2400,36.1,Betula ermanii,"r simulated from mean and SE extracted from graph, QR May 12"
+Takahashi 2008,-0.1880204,4,10,40,4,m,within,tree angio,temp,1600,2400,36.1,Sorbus commixta,"r simulated from mean and SE extracted from graph, QR May 12"
+Luo 2005,-0.173205081,6,see paper,18,18,m,among,many,temp,1900,3700,29.6,Tibetan trees,individual is a species mean at a site
+Luo 2005,0.4,6,see paper,18,18,a,among,many,temp,1900,3700,29.6,Tibetan trees,individual is a species mean at a site
+Ellison 2005,0.7916031,5,see table,56,56,m,within,forb,temp,411,1241,42.2,Darlingtonia californica,"r calculated from raw data provided by author, QR May 21"
+Steinke 2008,0.5829522,8,5,40,8,m,within,tree angio,temp,800,1700,41.4,Nothofagus antarctica,did regression from table of site means 1 Oct 2012
+Zhang 2011,0.8007462,4,5,20,4,a,within,tree angio,temp,2650,3920,28,Quercus guyavifolia,did regression from table of site means 1 Oct 2012
+Peng 2012,0.7575565,5,many,many,5,m,within,tree conifer,temp,2579,3500,33,Abies faxoniana,regression from site means in figure 1 Oct 2012
+Peng 2012,0.8867813,5,many,many,5,a,within,tree conifer,temp,2579,3500,33,Abies faxoniana,regression from site means in figure 1 Oct 2012
+Fernandez-Calvo,0.7058481,9,4,36,9,m,within,shrub,temp,750,1250,43.1,Vaccinium myrtillus,regression from data extracted from graph
