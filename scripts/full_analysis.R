@@ -698,6 +698,21 @@ a$effects
 tmp = data.frame(elevation = c(30,500,800,2000,2500), mat = c(24.6, 22.2, 20.7, 14.5, 11.9))
 tmp = merge(tmp,sp_by_location,by="elevation",all=T)
 
+# Read's raw data
+rLMA = read.csv("data/READ_lmaraws.csv",as.is=T); head(rLMA) # g/m2
+rLNC = read.csv("data/READ_nmraws.csv",as.is=T); head(rLNC) # %
+
+# Filer raw data
+rLMA = subset(rLMA,latitude<=24 & elevation<=3000)
+rLNC = subset(rLNC,latitude<=24 & elevation<=3000)
+
+plot(lma~elevation,rLMA)
+plot(nmass~elevation,rLNC)
+
+# Read's meta-analysis data
+Rlma = read.csv("data/READ_lma3.csv",as.is=T); head(Rlma)
+Rlnc = read.csv("data/READ_leafn3.csv",as.is=T); head(Rlnc)
+
 # SLA/LMA
 cor(1/tmp$sla,tmp$mat) # correlation observed in the CR melastomes (LMA vs. MAT)
 # range reported in the meta-analisis: from -0.30 to -0.68
