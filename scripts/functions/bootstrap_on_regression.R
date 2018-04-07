@@ -7,6 +7,7 @@ regress_bootstrap <- function(df, trait, reps = 1000) {
   elev5 <- unlist(df[df$elevation == 2500, trait])
 
   rsq <- numeric(reps)
+  pears_r <- numeric(reps)
   pvals <- numeric(reps)
   for(ii in 1:reps){
     comm1 = sample(x = elev1, size = 6)
@@ -19,9 +20,10 @@ regress_bootstrap <- function(df, trait, reps = 1000) {
     net_lm <- lm(df_to_analyse[,2]~df_to_analyse[,1])
     rsq[ii] <- round(summary(net_lm)$r.squared, 2)
     pvals[ii] <- anova(net_lm)$'Pr(>F)'[1]
+    pears_r[ii] <- cor(df_to_analyse[,2],df_to_analyse[,1])
   }
   sigpvals = sum(pvals < .05)/length(pvals)
 
-  return(list(pvals = pvals, rsq = rsq, sigpavls = sigpvals))
+  return(list(pvals = pvals, rsq = rsq, sigpavls = sigpvals, pears_r = pears_r))
   
 }

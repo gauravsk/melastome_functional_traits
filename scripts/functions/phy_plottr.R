@@ -15,7 +15,8 @@ phy_plottr <- function (df, trait, phy, title, log = T, checkorder = T, pch = 19
   
   
   to_plot <- data.frame(x = traitcol, y = 2:(ntips+1))
-  plot(x = na.omit(to_plot$x), y = to_plot[which(!is.nan(to_plot$x)), "y"], pch = pch, cex = cex, axes = F, type = "b", xlab = "", ylab = "", ylim = c(1,ntips))
+  plot(x = na.omit(to_plot$x), y = to_plot[which(!is.nan(to_plot$x)), "y"], pch = pch, cex = cex, axes = F,
+       type = "p", xlab = "", ylab = "", ylim = c(1,ntips))
   axis(side = 1)
   mtext(side = 3, line = 1, text = title, cex = .8, ...)
   

@@ -669,10 +669,11 @@ if(write_outputs == TRUE) {dev.off()}
 
 # Regression bootstraps ------
 source("scripts/functions/bootstrap_on_regression.R")
+source("scripts/functions/aov_bootstrap.R")
 
 traits_boot = c("log_sla", "log_ldmc", "log_leaf_area", "log_specific_force", "lnc", "stem_density", "log_seed_area")
 
-regression_bootstraps = lapply(traits_boot, function(x) regress_bootstrap(df = sp_by_location, trait = x))
+regression_bootstraps = lapply(traits_boot, function(x) regress_bootstrap(df = sp_by_location, trait = x, reps = 10))
 aov_bootstraps = lapply(traits_boot, function(x) aov_bootstrap(df = sp_by_location, trait = x))
 
 regression_bootstrap_pvals = sapply(regression_bootstraps, function(x) x$sigpavls)
