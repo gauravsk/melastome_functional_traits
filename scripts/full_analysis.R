@@ -1,6 +1,6 @@
 # Complete analysis of the melastome trait turnover data
 # Gaurav Kandlikar, gkandlikar@ucla.edu
-# Last updated 1 August 2016
+# Last updated 12 April 2018
 
 # Set up ----------
 library(dplyr); library(ape); library(picante); library(vegan)
@@ -564,7 +564,9 @@ colvec <- colors[(species_averages$growth_form)]
 defined_lwd = 0.75
 margin_text_size <- 0.65
 
-if(write_outputs == TRUE) {pdf("figures/for_submission/figure s1.pdf", height = 15, width = 21)}
+
+# Phylo fig ----------------------
+if(write_outputs == TRUE) {pdf("figures/phylogeny-fig.pdf", height = 15, width = 21)}
 # Set the layout
 layout(matrix (c(1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9), 1, 11, byrow = T))
 # Plot the phylogeny
@@ -605,64 +607,80 @@ axis(side = 1, at = 1:5, labels = c("30", "500", "800", "2000", "2500"), srt = 4
 axis(side = 3, at = 2:5, labels = c("35", "24", "20", "6"), tick = F, padj = 3)
 axis(side = 3, at = 1, labels = c("n species = 45"), tick = F, padj = 3, hadj = .9)
 mtext(side = 1, "elevation (m)", line = 2.5, cex = margin_text_size)
+box()
 # Start plotting traits
 phy_plottr(df = species_averages, phy = phylo, trait = "log_sla", col = "grey10", 
            log = F, cex = 1.25, lwd = defined_lwd, 
            title = expression(paste('log'[10],'(SLA)')))
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$log_sla$calc_k, 3)),
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$log_sla$calc_k, 3)),
       cex = margin_text_size)
 mtext(side = 1, expression(paste('cm'^2,'/g')), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$log_sla), lwd = 0.7, lty = 3)
+box()
+
 
 
 # leaf area
+
 phy_plottr(df = species_averages, phy = phylo, trait = "log_leaf_area", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, 
-           title = expression(paste('log'[10],'(Leaf Area)')))
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$log_leaf_area$calc_k, 3), "*"),
+           title = expression(paste('log'[10],'(Leaf Size)')))
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$log_leaf_area$calc_k, 3), "*"),
       cex = margin_text_size)
 mtext(side = 1, expression(paste("cm" ^2)), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$log_leaf_area), lwd = 0.7, lty = 3)
+
+box()
 
 # Stem Density
 phy_plottr(df = species_averages, phy = phylo, trait = "stem_density", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, 
            title = expression(paste('Stem density')))
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$stem_density$calc_k, 3)),
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$stem_density$calc_k, 3)),
       cex = margin_text_size)
 mtext(side = 1, expression(paste('g/','cm'^3)), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$stem_density), lwd = 0.7, lty = 3)
+box()
+
 # LDMC
 phy_plottr(df = species_averages, phy = phylo, trait = "log_ldmc", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, 
            title = expression(paste('log'[10],'(LDMC)')))
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$log_ldmc$calc_k, 3), "*"),
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$log_ldmc$calc_k, 3), "*"),
       cex = margin_text_size)
 mtext(side = 1, expression(paste('mg/g')), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$log_ldmc), lwd = 0.7, lty = 3)
+box()
+
 # SFP
 
 phy_plottr(df = species_averages, phy = phylo, trait = "log_specific_force", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, title = expression(paste('log'[10],'(Leaf Toughness)')))
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$log_specific_force$calc_k, 3), "*"),cex = margin_text_size)
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$log_specific_force$calc_k, 3), "*"),cex = margin_text_size)
 mtext(side = 1, expression(paste('N/' ,'m'^2)), line = 2.5, cex = margin_text_size)
 
 abline(v = mean(species_averages$log_specific_force), lwd = 0.7, lty = 3)
+box()
+
 # lnc
 phy_plottr(df = species_averages, phy = phylo, trait = "lnc", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, title = "Leaf [N]")
-mtext(side = 3, line = -0.25, text = paste("K =",  round(K_values$lnc$calc_k, 3)),
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$lnc$calc_k, 3)),
       cex = margin_text_size)
 mtext(side = 1, expression(paste('%')), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$lnc), lwd = 0.7, lty = 3)
+box()
+
 # seed
 phy_plottr(df = species_averages, phy = phylo, trait = "log_seed_area", col = "grey10",
            log = F, cex = 1.25, lwd = defined_lwd, 
            title = expression(paste('log'[10],'(Seed Size)')))
-mtext(side = 3, line = -.25, text = paste("K =",  round(K_values$log_seed_area$calc_k, 3), "*"),
+mtext(side = 3, line = 0, text = paste("K =",  round(K_values$log_seed_area$calc_k, 3), "*"),
       cex = margin_text_size)
 mtext(side = 1, expression(paste(mu, m^2)), line = 2.5, cex = margin_text_size)
 abline(v = mean(species_averages$log_seed_area, na.rm = T), lwd = 0.7, lty = 3)
+box()
+
 
 if(write_outputs == TRUE) {dev.off()}
 
