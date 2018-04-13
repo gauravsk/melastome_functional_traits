@@ -687,31 +687,21 @@ if(write_outputs == TRUE) {dev.off()}
 
 # Regression bootstraps ------
 source("scripts/functions/bootstrap_on_regression.R")
-source("scripts/functions/aov_bootstrap.R")
+source("scripts/functions/regression_permutation.R")
 
 traits_boot = c("log_sla", "log_ldmc", "log_leaf_area", "log_specific_force", "lnc", "stem_density", "log_seed_area")
 
 regression_bootstraps = lapply(traits_boot, function(x) regress_bootstrap(df = sp_by_location, trait = x, reps = 10))
-aov_bootstraps = lapply(traits_boot, function(x) aov_bootstrap(df = sp_by_location, trait = x))
-
 regression_bootstrap_pvals = sapply(regression_bootstraps, function(x) x$sigpavls)
-regressionbootstrap_rs = sapply(regression_bootstraps, function(x) mean(x$rsq))
-
-aov_bootstrap_pvals = sapply(aov_bootstraps, function(x) x$sigpavls)
-aov_bootstrap_fs = sapply(aov_bootstraps, function(x) mean(x$fstats))
-
+regression_bootstrap_rs = sapply(regression_bootstraps, function(x) mean(x$rsq))
 names(regression_bootstrap_pvals) = traits_boot
 names(regressionbootstrap_rs) = traits_boot
 
-names(aov_bootstrap_pvals) = traits_boot
-names(aov_bootstrap_fs) = traits_boot
-
-sp_by_location$log_sla
-a <- aov(log_sla~as.factor(elevation), data = sp_by_location)
-summary(a)
-a$effects
-
-
+regression_perms = lapply(traits_boot, function(x) regression_permutation(df = sp_by_location, trait = x, reps = 1000))
+regression_perm_pperms = sapply(regression_perms, function(x) x$pperm)
+names(regression_perms) = traits_boot
+names(regression_perm_pperms) = traits_boot
+regression_perm_pperms
 ## Comparison to Read et al. (2013) results
 # elevation to MAT
 tmp = data.frame(elevation = c(30,500,800,2000,2500), mat = c(24.6, 22.2, 20.7, 14.5, 11.9))
@@ -729,28 +719,14 @@ plot(lma~elevation,rLMA)
 plot(nmass~elevation,rLNC)
 
 # Read's meta-analysis data
-Rlma = read.csv("data/READ_lma3.csv",as.is=T); head(Rlma)
-Rlnc = read.csv("data/READ_leafn3.csv",as.is=T); head(Rlnc)
+Rlma = read.csv("data/read-metaanalysis/READ_lma3.csv",as.is=T); head(Rlma)
+Rlnc = read.csv("data/read-metaanalysis/READ_leafn3.csv",as.is=T); head(Rlnc)
 
 # SLA/LMA
 cor(1/tmp$sla,tmp$mat) # correlation observed in the CR melastomes (LMA vs. MAT)
 # range reported in the meta-analisis: from -0.30 to -0.68
+cor(1/tmp$sla,tmp$elevation) # correlation observed in the CR melastomes (LMA vs. MAT)
 
 # LNC
 cor(tmp$lnc,tmp$mat)
 # range reported in the meta-analisis: from -0.?? to 0.??
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
