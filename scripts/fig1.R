@@ -35,17 +35,17 @@ mtext(side = 3, text = "b", adj = 0.02, line = -1, font = 2, cex = lcex)
 plot(sp_by_location$log_leaf_area~jitter(sp_by_location$elevation, factor = .3), 
      xlab = "", pch = sp_by_location$pchvec, bty = "l", xaxt = "n", 
      bg = sp_by_location$colvec, cex = 1.5,
-     ylab = expression(paste('log'[10],'(Leaf Area) (','cm'^2,')')), las = 1,
+     ylab = expression(paste('log'[10],'(Leaf area) (','cm'^2,')')), las = 1,
      ylim=c(.2,3.2))
 add_line(trait = "log_leaf_area", df = sp_by_location, log = F)
 #box(lwd = 0.5)
 mtext(side = 3, text = "c", adj = 0.02, line = -1, font = 2, cex = lcex)
 
-# Leaf toughness
+# Leaf force to punch
 plot(sp_by_location$log_specific_force~jitter(sp_by_location$elevation, factor = .3), cex = 1.5,
      xlab = "", pch = sp_by_location$pchvec, bty = "l", 
      bg = sp_by_location$colvec,  las = 1, ylim = c(-0.2,0.9),
-     ylab = expression(paste('log'[10],'(Leaf Toughness) (','N m'^-2,')')))
+     ylab = expression(paste('log'[10],'(Leaf force to punch) (','N m'^-2,')')))
 add_line(trait = "log_specific_force", df = sp_by_location, log = F, pos=0.1)
 #box(lwd = 0.5)
 mtext(side = 3, text = "d", adj = 0.02, line = -1, font = 2, cex = lcex)
@@ -53,7 +53,7 @@ mtext(side = 3, text = "d", adj = 0.02, line = -1, font = 2, cex = lcex)
 # Leaf N
 plot(sp_by_location$lnc~jitter(sp_by_location$elevation, factor = .3), 
      xlab = "", pch = sp_by_location$pchvec, bty = "l", 
-     bg = sp_by_location$colvec, cex = 1.5, las = 1, ylab = "Leaf Nitrogen (%)")
+     bg = sp_by_location$colvec, cex = 1.5, las = 1, ylab = "Leaf nitrogen concentration (%)")
 add_line(trait = "lnc", df = sp_by_location, log = F)
 #box(lwd = 0.5)
 mtext(side = 3, text = "e", adj = 0.02, line = -1, font = 2, cex = lcex)
@@ -62,7 +62,7 @@ mtext(side = 3, text = "e", adj = 0.02, line = -1, font = 2, cex = lcex)
 plot(sp_by_location$stem_density~jitter(sp_by_location$elevation, factor = .3),
      xlab = "", pch = sp_by_location$pchvec, bty = "l", 
      bg = sp_by_location$colvec,  las = 1, cex = 1.5,
-     ylab = expression(paste('Stem density (','g cm'^-3,')')))
+     ylab = expression(paste('Stem-specific density (','g cm'^-3,')')))
 add_line(trait = "stem_density", df = sp_by_location, log = F, pos=.65)
 #box(lwd = 0.5)
 mtext(side = 3, text = "f", adj = 0.02, line = -1, font = 2, cex = lcex)
